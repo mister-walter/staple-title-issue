@@ -5,7 +5,3 @@
 ;; page.
 (defmethod staple:page-type ((system (eql (asdf:find-system :foo-sys/bar))))
   'my-page)
-
-(defmethod staple:subsystems ((system (eql (asdf:find-system :foo-sys))))
-  (list (asdf:find-system :foo-sys/bar)
-        (asdf:find-system :foo-sys/foo)))
